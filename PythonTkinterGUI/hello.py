@@ -11,4 +11,11 @@ from tkinter import *
 # The following line must always be the first line when using TKinter
 root = Tk()
 
+# Creating a label widget
 myLabel = Label(root, text="Hello World!")
+
+# Shoving it to the screen
+myLabel.pack()
+
+# Creates the loop that will run until the program ends
+root.mainloop()
