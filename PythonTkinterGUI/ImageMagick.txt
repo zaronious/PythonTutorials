@@ -1,0 +1,6 @@
+To convert an image on Linux with ImageMagick just type in "magick <original filename> <output filenampe>" 
+Like: magick convert rose.jpg rose.png
+
+More here: https://imagemagick.org/script/convert.php
+
+NOTE: You need to use only .xbm for linux icons using TKinter
