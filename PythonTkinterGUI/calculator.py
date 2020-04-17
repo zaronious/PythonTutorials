@@ -6,16 +6,19 @@ root.title("Simple Calculator")
 e = Entry(root, width=35, borderwidth=5)
 e.grid(row=0, column=0, columnspan=3, padx=10, pady=10)
 
+
 def button_click(number):
     current = e.get()
     e.delete(0, END)
     e.insert(0, str(current) + str(number))
 
+
 def button_clear():
     e.delete(0, END)
 
+
 def button_add():
-    global f_num 
+    global f_num
     global math
 
     first_number = e.get()
@@ -23,8 +26,9 @@ def button_add():
     f_num = int(first_number)
     e.delete(0, END)
 
+
 def button_subtract():
-    global f_num 
+    global f_num
     global math
 
     first_number = e.get()
@@ -32,8 +36,9 @@ def button_subtract():
     f_num = int(first_number)
     e.delete(0, END)
 
+
 def button_multiply():
-    global f_num 
+    global f_num
     global math
 
     first_number = e.get()
@@ -41,14 +46,16 @@ def button_multiply():
     f_num = int(first_number)
     e.delete(0, END)
 
+
 def button_divide():
-    global f_num 
+    global f_num
     global math
 
     first_number = e.get()
     math = "division"
     f_num = int(first_number)
     e.delete(0, END)
+
 
 def button_equal():
     second_number = e.get()
@@ -78,7 +85,7 @@ button_8 = Button(root, text="8", padx=40, pady=20, command=lambda: button_click
 button_9 = Button(root, text="9", padx=40, pady=20, command=lambda: button_click(9))
 
 button_0 = Button(root, text="0", padx=40, pady=20, command=lambda: button_click(0))
-button_clear =  Button(root, text="Clear", padx=74, pady=20, command=button_clear)
+button_clear = Button(root, text="Clear", padx=74, pady=20, command=button_clear)
 
 button_plus = Button(root, text="+", padx=40, pady=20, command=button_add)
 button_equal = Button(root, text="=", padx=86, pady=20, command=button_equal)
@@ -103,11 +110,19 @@ button_9.grid(row=1, column=2)
 button_0.grid(row=4, column=0)
 button_clear.grid(row=4, column=1, columnspan=2)
 
-button_plus.grid(row=5, column=0,)
+button_plus.grid(
+    row=5, column=0,
+)
 button_equal.grid(row=5, column=1, columnspan=2)
 
-button_sub.grid(row=6, column=0,)
-button_mul.grid(row=6, column=1,)
-button_div.grid(row=6, column=2,)
+button_sub.grid(
+    row=6, column=0,
+)
+button_mul.grid(
+    row=6, column=1,
+)
+button_div.grid(
+    row=6, column=2,
+)
 
 root.mainloop()
